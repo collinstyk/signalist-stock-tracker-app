@@ -7,11 +7,10 @@ import React from "react";
 
 const NavItems = () => {
   const pathname = usePathname();
-  console.log(pathname);
 
   const isActive = (path: string) => {
-    if (path === "/") return path === "/";
-    return pathname.startsWith(path);
+    if (path === "/") return pathname === "/";
+    return pathname === path || pathname.startsWith(path + "/");
   };
   return (
     <ul className="flex flex-col sm:flex-row p-2 gap-3 sm:gap-10 font-medium">
