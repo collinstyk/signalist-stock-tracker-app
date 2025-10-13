@@ -1,4 +1,4 @@
-import { Control, FieldError } from "react-hook-form";
+import { Control, FieldError, UseFormRegister } from "react-hook-form";
 
 export declare global {
   interface SignInFormData {
@@ -22,7 +22,7 @@ export declare global {
     disabled?: boolean;
     placeholder: string;
     type?: string;
-    register: UseFormRegister<SignUpFormData>;
+    register: UseFormRegister<any>;
     error: FieldError | undefined;
     validation: {
       [key: string]: unknown;
