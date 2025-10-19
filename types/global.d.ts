@@ -22,7 +22,7 @@ export declare global {
     disabled?: boolean;
     placeholder: string;
     type?: string;
-    register: UseFormRegister<any>;
+    register: UseFormRegister<Record<string, unknown>>;
     error: FieldError | undefined;
     validation: {
       [key: string]: unknown;
@@ -39,7 +39,7 @@ export declare global {
     label: string;
     placeholder: string;
     options: readonly Option[];
-    control: Control<any>;
+    control: Control<Record<string, unknown>>;
     error?: FieldError;
     required?: boolean;
   };
@@ -47,7 +47,7 @@ export declare global {
   type CountrySelectFieldProps = {
     name: string;
     label: string;
-    control: Control<any>;
+    control: Control<Record<string, unknown>>;
     placeholder: string;
     error: FieldError | undefined;
     required?: boolean;
