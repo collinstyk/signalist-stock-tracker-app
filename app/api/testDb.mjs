@@ -1,5 +1,4 @@
 import { NextResponse } from "next/server.js";
-import "dotenv/config";
 import { connectToDatabase } from "../../database/mongoose.ts";
 
 async function GET() {

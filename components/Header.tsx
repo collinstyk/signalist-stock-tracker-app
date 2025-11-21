@@ -4,7 +4,7 @@ import React from "react";
 import NavItems from "./NavItems";
 import UserDropdown from "./UserDropdown";
 
-const Header = () => {
+const Header = ({user}: {user: User}) => {
   return (
     <header className="container header-wrapper">
       <Link href={"/"}>
@@ -21,7 +21,7 @@ const Header = () => {
         <NavItems />
       </nav>
 
-      <UserDropdown />
+      <UserDropdown user={user}/>
 
       {/* UserDropdown */}
     </header>
