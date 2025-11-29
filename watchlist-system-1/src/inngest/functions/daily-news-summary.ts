@@ -7,8 +7,9 @@ import { User } from "../../types"; // Assuming User type is defined in types/in
 const inngest = new Inngest({ region: "us" });
 
 export const sendDailyNewsSummary = inngest.createFunction(
-  "Send Daily News Summary",
-  { cron: "0 9 * * *" }, // Runs every day at 9 AM
+  { id: "send-daily-news-summary", name: "Send Daily News Summary" },
+  { cron: "0 9 * * *" },
+  async ({ event }) => {
   async ({ event }) => {
     try {
       const users: User[] = await getAllUsers(); // Function to retrieve all users
