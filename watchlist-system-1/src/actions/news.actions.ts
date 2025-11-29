@@ -1,9 +1,5 @@
-import { useServer } from "some-server-library"; // Replace with actual server library
 import axios from "axios";
-import { WatchlistItem } from "../database/models/watchlist.model"; // Adjust the import path as necessary
 import { NewsArticle } from "../types/index"; // Adjust the import path as necessary
-
-useServer();
 
 export async function fetchNewsBySymbols(symbols: string[]): Promise<NewsArticle[]> {
   try {
