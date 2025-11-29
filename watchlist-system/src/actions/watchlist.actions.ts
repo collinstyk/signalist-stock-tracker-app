@@ -1,9 +1,9 @@
+"use server";
+
 import { connect } from 'mongoose';
 import { Watchlist } from '../database/models/watchlist.model';
 import { User } from '../database/models/user.model'; // Assuming a User model exists
 import { logger } from '../utils/logger'; // Assuming a logger utility exists
-
-"use server";
 
 export async function getWatchlistSymbolsByEmail(email: string): Promise<string[]> {
   try {
