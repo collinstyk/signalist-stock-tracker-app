@@ -29,7 +29,7 @@ export const sendDailyNewsSummary = inngest.createFunction(
 
 // Helper function to summarize news articles
 function summarizeNews(articles: any[]): string {
-  return articles.map(article => `${article.title}: ${article.link}`).join("\n");
+  return articles.map(article => `${article.title}: ${article.url}`).join("\n");
 }
 
 // Placeholder function to get all users
