@@ -82,6 +82,16 @@ declare global {
     email: string;
   };
 
+  type UserForNewsEmail = {
+    name?: string;
+    email: string;
+    country?: string;
+    investmentGoals?: string;
+    riskTolerance?: string;
+    preferredIndustry?: string;
+    [key: string]: any;
+  };
+
   type Stock = {
     symbol: string;
     name: string;
